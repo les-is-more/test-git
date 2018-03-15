@@ -16,12 +16,13 @@ set.seed(2)
 max = apply(cereal , 2 , max)
 min = apply(cereal, 2 , min)
 
-
-scaled = as.data.frame(scale(cereal, center = min, scale = max - min))
-
+?neuralnet
 
 # fitting the neural net procedure to the train data
-NN = neuralnet(rating ~ calories + protein + fat + sodium + fiber, train, hidden = 3 , linear.output = T )
+NN = neuralnet(rating ~ calories + protein + fat + sodium + fiber, 
+               train, hidden = 3 ,
+               algorithm = backprop,
+               learningrate = 1.2,
+               linear.output = T )
 
 plot(NN)
-

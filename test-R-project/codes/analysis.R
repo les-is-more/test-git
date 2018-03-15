@@ -19,7 +19,6 @@ a = ebqall %>%
   mutate(conv=ifelse(is.na(conversion_quantity),0,1)) %>%
   select(path_id, conv) %>%
   unique()
-?par()
 
 data(mtcars)
 mtcars$cyl <- factor(mtcars$cyl, levels = c("4","6","8"),

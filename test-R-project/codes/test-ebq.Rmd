@@ -24,7 +24,7 @@ options(knitr.table.format = "latex")
 
 The following statistics were captured to give the users a gist of the data. This includes the overall mean, count, and variable characteristics.
 
-```{r table#1, format='latex', echo=FALSE}
+```{r table#1, format='latex', echo=FALSE, }
 data(mtcars)
 mtcars$cyl <- factor(mtcars$cyl, levels = c("4","6","8"),
                      labels = c("four","six","eight"))
